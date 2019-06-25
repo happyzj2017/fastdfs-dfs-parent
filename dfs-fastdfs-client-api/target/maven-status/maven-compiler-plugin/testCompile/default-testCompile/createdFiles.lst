@@ -1,0 +1,17 @@
+org\csource\fastdfs\TestLoad$DownloadThread.class
+org\csource\fastdfs\TestLoad.class
+org\csource\fastdfs\ClientGlobalTests.class
+org\csource\fastdfs\TestClient1.class
+org\csource\fastdfs\DownloadFileWriter.class
+org\csource\fastdfs\Test1.class
+org\csource\fastdfs\TestAppender.class
+org\csource\fastdfs\Monitor.class
+org\csource\fastdfs\Test.class
+org\csource\fastdfs\TestLoad$Uploader.class
+org\csource\fastdfs\TestLoad$Downloader.class
+org\csource\common\IniFileReaderTests.class
+org\csource\fastdfs\TestClient.class
+org\csource\fastdfs\TestAppender1.class
+org\csource\fastdfs\TestLoad$DownloadFileDiscard.class
+org\csource\fastdfs\TestLoad$UploadThread.class
+org\csource\fastdfs\UploadLocalFileSender.class

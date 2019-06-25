@@ -1,0 +1,13 @@
+com\netwaymedia\dfs\app\api\DFSAppClient.class
+com\netwaymedia\dfs\app\api\resp\FileInfoIdData.class
+com\netwaymedia\dfs\app\api\APIHttpUtils.class
+com\netwaymedia\dfs\app\api\resp\FileInfoIdData$FileInfoId.class
+com\netwaymedia\dfs\app\api\DFSAppClient$1.class
+com\netwaymedia\dfs\app\api\BaseResponse.class
+com\netwaymedia\dfs\app\api\resp\BaseResp.class
+com\netwaymedia\dfs\app\api\APIConfigure.class
+com\netwaymedia\dfs\app\api\DFSAppClient$EndUpLoadHttpTask.class
+com\netwaymedia\dfs\app\api\GsonUtils.class
+com\netwaymedia\dfs\app\api\resp\ServerData.class
+com\netwaymedia\dfs\app\api\DFSAppClient$DeleteHttpTask.class
+com\netwaymedia\dfs\app\api\resp\ServerData$ServerDataBody.class

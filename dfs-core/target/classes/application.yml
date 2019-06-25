@@ -1,0 +1,58 @@
+--- #全局配置
+server:
+ port: 8881
+ 
+dfs:
+ thread:
+  num:
+   upload: 2
+   download: 2
+
+spring:
+ http:
+  multipart:
+   maxFileSize: 10240MB
+   maxRequestSize: 10240MB
+ thymeleaf:
+  cache: false
+  prefix: classpath:/templates/
+  suffix: .html
+  encoding: UTF-8
+  content-type: text/html
+  mode: HTML5
+  
+db:
+ driver: com.mysql.jdbc.Driver
+ url: jdbc:mysql://192.168.2.15:3306/dfs?characterEncoding=utf8&useSSL=false
+ user: exhibition
+ password: ofweek_2015
+
+c3p0:
+ initialPoolSize: 10
+ minPoolSize: 5
+ maxPoolSize: 30
+ maxIdleTime: 300 #seconds
+ acquireIncrement: 3
+ idleConnectionTestPeriod: 60 #seconds
+ maxStatementsPerConnection: 5
+ TestSql: select 1 from dual
+ 
+ 
+logging: 
+ file: ./logs/dfslog.log  
+ level: 
+  root: INFO
+  com.netwaymedia.dfs: DEBUG
+  
+fastdfs:
+ tracker_servers: 192.168.2.123:22122 #10.0.11.201:22122,10.0.11.202:22122,10.0.11.203:22122
+ connect_timeout_in_seconds: 10
+ network_timeout_in_seconds: 30
+ charset: utf-8
+ 
+ 
+
+   
+
+
+

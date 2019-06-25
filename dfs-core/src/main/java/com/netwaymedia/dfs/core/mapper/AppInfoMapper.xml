@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.netwaymedia.dfs.core.mapper.AppInfoMapper">
+	<cache />
+	<resultMap type="com.netwaymedia.dfs.core.entity.AppInfoEntity"
+		id="AppInfoEntity">
+		<id property="appKey" column="app_key" />
+		<result property="appSecret" column="app_secret" />
+		<result property="groupName" column="group_name" />
+		<result property="status" column="status" />
+		<result property="createBy" column="create_by" />
+		<result property="createDate" column="create_date" />
+		<result property="updateDate" column="update_date" />
+	</resultMap>
+
+	<select id="getAllAppInfo" flushCache="true" resultMap="AppInfoEntity">
+		select * from dfs_app_info order by create_date desc
+	</select>
+
+	<select id="getAppInfoByAppKey" flushCache="true" resultMap="AppInfoEntity" statementType="PREPARED">
+		select * from dfs_app_info where app_key = #{appKey}
+	</select>
+</mapper>  

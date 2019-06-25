@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.netwaymedia.dfs.core.mapper.FileInfoMapper">
+	<cache />
+	<resultMap type="com.netwaymedia.dfs.core.entity.FileInfoEntity"
+		id="FileInfoEntity">
+		<id property="id" column="id" />
+		<result property="fileId" column="file_id" />
+		<result property="name" column="name" />
+		<result property="bytes" column="bytes" />
+		<result property="groupName" column="group_name" />
+		<result property="accessType" column="access_type" />
+		<result property="belongsApp" column="belongs_app" />
+		<result property="status" column="status" />
+		<result property="createDate" column="create_date" />
+		<result property="updateDate" column="update_date" />
+	</resultMap>
+
+	<insert id="addFileInfo" useGeneratedKeys="true" keyColumn="id"
+		keyProperty="fileInfo.id">
+		insert into dfs_file_info
+		(file_id,name,bytes,group_name,access_type,belongs_app,status,create_date,update_date)
+		values
+		(#{fileInfo.fileId},#{fileInfo.name},#{fileInfo.bytes},#{fileInfo.groupName},#{fileInfo.accessType},#{fileInfo.belongsApp},#{fileInfo.status},#{fileInfo.createDate},#{fileInfo.updateDate})
+	</insert>
+
+	<update id="updateFileInfoById" flushCache="true">
+		update dfs_file_info
+		set
+		<if test="fileInfo.fileId != null ">
+			file_id = #{fileInfo.fileId},
+		</if>
+		<if test="fileInfo.groupName != null ">
+			group_name = #{fileInfo.groupName},
+		</if>
+		<if test="fileInfo.status != null ">
+			status = #{fileInfo.status},
+		</if>
+		<if test="fileInfo.updateDate != null ">
+			update_date = #{fileInfo.updateDate}
+		</if>
+		where id = #{fileInfo.id}
+	</update>
+	
+	<update id="updateFileInfoByFileId" flushCache="true">
+		update dfs_file_info
+		set
+		<if test="fileInfo.status != null ">
+			status = #{fileInfo.status},
+		</if>
+		<if test="fileInfo.updateDate != null ">
+			update_date = #{fileInfo.updateDate}
+		</if>
+		where file_id = #{fileInfo.fileId}
+	</update>
+
+	<select id="getFileLengthByFIleId" resultType="long">
+		select bytes from dfs_file_info where file_id = #{fileId}
+	</select>
+
+</mapper>  

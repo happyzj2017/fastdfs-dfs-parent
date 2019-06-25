@@ -1,0 +1,1 @@
+java -Xmx512m -Xms512m -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=192.168.2.123 -jar dfsboot.jar
