@@ -1,4 +1,4 @@
-**dfs文件系统说明**<br>
+**基于fastdfs的简易文件系统**<br>
 
 **1.系统架构**<br>
 由dfs-fastdfs-client-api、dfs-core、 dfs-app-api三部分组成。<br>
